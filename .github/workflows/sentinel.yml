@@ -19,4 +19,4 @@ jobs:
       - uses: krmayankk/sentinel@main
         with:
           anthropic-api-key: ${{ secrets.ANTHROPIC_API_KEY }}
-          fail-on: ""
+          fail-on: "high,critical"
