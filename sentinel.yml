@@ -1,0 +1,6 @@
+skills:
+  - change_completeness:
+      cross_repo:
+        - krmayankk/hellotest-consumer
+
+fail_on: [high, critical]

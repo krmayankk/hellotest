@@ -1,8 +1,12 @@
-def compute_total(price, quantity, tax_rate=0, discount=0):
-    """Compute total price with tax and discount."""
+def compute_total(price, quantity, discount, tax=0):
+    """Compute total price with discount and tax.
+
+    NOTE: signature changed — discount is now required (was optional),
+    tax_rate renamed to tax.
+    """
     subtotal = price * quantity
     after_discount = subtotal - (subtotal * discount)
-    return after_discount + (after_discount * tax_rate)
+    return after_discount + (after_discount * tax)
 
 
 def format_currency(amount):
