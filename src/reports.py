@@ -6,5 +6,5 @@ def daily_summary(orders):
     grand_total = 0
     for order in orders:
         for item in order["items"]:
-            grand_total += compute_total(item["price"], item["quantity"], discount=item.get("discount", 0))
+            grand_total += compute_total(item["price"], item["quantity"], item.get("discount", 0))
     return f"Daily total: {format_currency(grand_total)}"
